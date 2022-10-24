@@ -31,86 +31,17 @@
 
     <!-- favicons
     ================================================== -->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/nodejs.png" type="image/x-icon">
 
 </head>
 
 <body id="top">
 
-    <!-- header
-    ================================================== -->
-    <header class="s-header">
-
-        <!-- <div class="header-logo">
-            <a class="site-logo" href="index.html"><img src="images/logo.png" alt="Homepage"></a>
-        </div> -->
-
-        <nav class="header-nav-wrap">
-            <ul class="header-nav">
-                <li class="current"><a  href="/" title="home">Inicio</a></li>
-                <li><a href="/sobremi" title="about">Sobre mi</a></li>
-                <li><a class="smoothscroll" href="#blog" title="works">Estudios</a></li>
-                <li><a href="/referencias" title="blog">Referencias</a></li>
-                <li><a class="smoothscroll" href="#contact" title="contact">Contacto</a></li>
-            </ul>
-        </nav>
-
-        <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
-
-    </header> <!-- end s-header -->
-
-
-    <!-- home
-   ================================================== -->
-    <section id="home" class="s-home page-hero target-section" data-parallax="scroll" data-image-src="images/yooo.jpg"
-        data-natural-width=3000 data-natural-height=2000 data-position-y=center>
-
-        <div class="overlay"></div>
-        <div class="shadow-overlay"></div>
-
-        <div class="home-content">
-
-            <div class="row home-content__main">
-
-
-                <h1>
-                    Luis Sneyder Silva Albarracin <br>
-                    Analista, programador <br>
-                    Diseño software
-                </h1>
-
-
-                <div class="home-content__scroll">
-                    <a href="#blog" class="scroll-link smoothscroll">
-                        <span>Scroll Down</span>
-                    </a>
-                </div>
-
-            </div>
-
-        </div> <!-- end home-content -->
-
-        <ul class="home-social">
-            <li>
-                <a href="https://www.facebook.com/luissneyder.silvaalbarracin"><i class="im im-facebook"
-                        aria-hidden="true"></i><span>Facebook</span></a>
-            </li>
-            <li>
-                <a href="https://twitter.com/titoneros"><i class="im im-twitter"
-                        aria-hidden="true"></i><span>Twiiter</span></a>
-            </li>
-            <li>
-                <a href="https://www.instagram.com/titosilva_11/"><i class="im im-instagram"
-                        aria-hidden="true"></i><span>Instagram</span></a>
-            </li>
-            <li>
-                <a href="https://co.pinterest.com/titosilvaa/"><i class="im im-pinterest"
-                        aria-hidden="true"></i><span>Pinterest</span></a>
-            </li>
-        </ul>
-        <!-- end home-social -->
-
+    <header>
+        <%- include('templates/header'); %>
+    </header>
+    <section>
+        <%- include('templates/section'); %>
     </section>
 
     <!-- blog
@@ -179,72 +110,14 @@
 
     </section> <!-- end s-blog -->
 
-    <!-- s-stats
-    ================================================== -->
-    <section id="contact" class="s-contact target-section">
+    <section>
+        <%- include('templates/contacto'); %>
+    </section>
 
-        <div class="overlay"></div>
-
-        <div class="row narrow section-intro">
-            <div class="col-full">
-                <h3>Contacto</h3>
-
-                <p class="lead">Luis Sneyder Silva Albarracin - Analista y programador
-                    <br>
-                    TEL: 3195821930 - EMAIL: lssilva07@misena.edu.co
-                </p>
-            </div>
-        </div>
-    </section> <!-- end s-contact -->
-
-
-    <!-- footer
-    ================================================== -->
     <footer>
-        <div class="row">
-            <div class="col-full">
-
-                <ul class="footer-social">
-                    <li><a href="https://www.facebook.com/luissneyder.silvaalbarracin">
-                            <i class="im im-facebook" aria-hidden="true"></i>
-                            <span>Facebook</span>
-                        </a></li>
-                    <li><a href="https://twitter.com/titoneros">
-                            <i class="im im-twitter" aria-hidden="true"></i>
-                            <span>Twitter</span>
-                        </a></li>
-                    <li><a href="https://www.instagram.com/titosilva_11/">
-                            <i class="im im-instagram" aria-hidden="true"></i>
-                            <span>Instagram</span>
-                        </a></li>
-                    <li><a href="https://co.pinterest.com/titosilvaa/">
-                            <i class="im im-pinterest" aria-hidden="true"></i>
-                            <span>Pinterest</span>
-                        </a></li>
-                </ul>
-
-            </div>
-        </div>
-
-        <div class="row footer-bottom">
-
-            <div class="col-twelve">
-                <div class="copyright">
-                    <span>© Copyright Silva 2022</span>
-                    <span>Design by <a>Luchito</a></span>
-                </div>
-
-                <div class="go-top">
-                    <a class="smoothscroll" title="Back to Top" href="#top"><i class="im im-arrow-up"
-                            aria-hidden="true"></i></a>
-                </div>
-            </div>
-
-        </div> <!-- end footer-bottom -->
-
-    </footer> <!-- end footer -->
-
-
+        <%- include('templates/footer'); %>
+    </footer>
+    
     <!-- photoswipe background
     ================================================== -->
     <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">

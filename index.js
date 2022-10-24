@@ -9,33 +9,21 @@ app.set('view engine','ejs')
 
 app.set('views',__dirname + '/views')
 
-app.get("/", (req, res) =>{
-    // res.send("Solo sena lkas");
-    // console.log(__dirname)
-    res.render('index',{titulo:"pagina Home cargada"})
-});
+app.use('/', require('./router/rutasweb'));
+app.use('/index', require('./router/index'));
 
-app.get("/sobremi", (req, res) =>{
-    // res.send("Solo sena lkas");
-    // console.log(__dirname)
-    res.render('sobremi')
-});
+app.use('/sobremi', require('./router/rutasweb'));
+app.use('/sobremi', require('./router/sobremi'));
 
-app.get("/estudios", (req, res) =>{
-    // res.send("Solo sena lkas");
-    // console.log(__dirname)
-    res.render('estudios',{titulo:"pagina Home de productos",descripcion:"Esta pagina es de productos"})
-});
+app.use('/estudios', require('./router/rutasweb'));
+app.use('/estudios', require('./router/estudios'));
 
-app.get("/referencias", (req, res) =>{
-    // res.send("Solo sena lkas");
-    // console.log(__dirname)
-    res.render('referencias')
-});
+app.use('/referencias', require('./router/rutasweb'));
+app.use('/referencias', require('./router/referencias'));
 
 
 app.use((req,res,next) =>{
-    res.status(404).render(__dirname + '/public/404.html')
+    res.status(404).render('404')
 });
 
 app.listen(port, () =>{
